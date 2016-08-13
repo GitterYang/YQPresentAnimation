@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KUA-Sg-C5b">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ejJ-ko-uBf">
+            <objects>
+                <navigationController id="KUA-Sg-C5b" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vd9-Xa-Z1F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fvO-0I-lE7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgR-xT-UnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="304"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKX-lX-thO">
+                                <rect key="frame" x="86" y="63" width="147" height="43"/>
+                                <color key="backgroundColor" red="0.18551066795821713" green="0.68183791035353536" blue="0.36287229536940308" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="iu4-J0-QRs"/>
+                                    <constraint firstAttribute="width" constant="147" id="rVi-V8-duB"/>
+                                </constraints>
+                                <state key="normal" title="push动画">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y8c-qK-8e5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfU-p6-sV7">
+                                <rect key="frame" x="86" y="156" width="147" height="43"/>
+                                <color key="backgroundColor" red="0.18551066799999999" green="0.68183791039999997" blue="0.36287229539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="5nw-5x-vcu"/>
+                                    <constraint firstAttribute="width" constant="147" id="uvn-af-cwC"/>
+                                </constraints>
+                                <state key="normal" title="present自定义动画">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3U-o4-X6D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Al4-U4-9Sh">
+                                <rect key="frame" x="86" y="238" width="147" height="43"/>
+                                <color key="backgroundColor" red="0.18551066799999999" green="0.68183791039999997" blue="0.36287229539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="57d-Vf-rkB"/>
+                                    <constraint firstAttribute="height" constant="43" id="Hay-Up-xrh"/>
+                                </constraints>
+                                <state key="normal" title="present原生动画">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="systemPresentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCT-wa-8Vj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kfU-p6-sV7" firstAttribute="centerX" secondItem="qKX-lX-thO" secondAttribute="centerX" id="7co-lY-Z1j"/>
+                            <constraint firstItem="kfU-p6-sV7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ou-yK-UAn"/>
+                            <constraint firstItem="Al4-U4-9Sh" firstAttribute="centerX" secondItem="qKX-lX-thO" secondAttribute="centerX" id="E0n-m1-rQQ"/>
+                            <constraint firstItem="Al4-U4-9Sh" firstAttribute="top" secondItem="kfU-p6-sV7" secondAttribute="bottom" constant="39" id="fe6-WJ-bge"/>
+                            <constraint firstItem="qKX-lX-thO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hxl-QV-muF"/>
+                            <constraint firstItem="kfU-p6-sV7" firstAttribute="top" secondItem="qKX-lX-thO" secondAttribute="bottom" constant="50" id="pWo-AN-j1r"/>
+                            <constraint firstItem="qKX-lX-thO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="peQ-k4-txF"/>
+                            <constraint firstItem="Al4-U4-9Sh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xGR-DM-lid"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="5XB-BK-FAb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="304"/>
+        </scene>
+    </scenes>
+</document>
